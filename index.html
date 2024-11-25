@@ -61,7 +61,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-6.977468933774569,-34.85519923345839],[-6.962489732658209,-34.829728774222986]]);
+        }).fitBounds([[-6.977472516287148,-34.85612332563205],[-6.962486106463028,-34.82880469721085]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -115,7 +115,7 @@
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = 'As camadas estão reunidas de acordo com os horizontes de planejamento (curto, médio e longo prazo). <br /> <br />Documento oficial publicado em: https://bit.ly/pdzs_publicados';
+                this._div.innerHTML = 'Documento oficial publicado em:<br />https://bit.ly/pdzs_publicados';
         };
         abstract.addTo(map);
         var zoomControl = L.control.zoom({
@@ -1140,7 +1140,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Objeto</th>\
-                        <td class="visible-with-data" id="Objeto">' + (feature.properties['Objeto'] !== null ? autolinker.link(feature.properties['Objeto'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['Objeto'] !== null ? autolinker.link(feature.properties['Objeto'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Finalidade</th>\
