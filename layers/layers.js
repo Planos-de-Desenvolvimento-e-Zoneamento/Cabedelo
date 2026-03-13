@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:31985").setExtent([294676.943036, 9228279.313640, 299084.714555, 9230987.314031]);
+//ol.proj.get("EPSG:31985").setExtent([291984.909858, 9223291.248750, 305724.749349, 9230273.653537]);
 var wms_layers = [];
 
 
@@ -164,20 +164,20 @@ var lyr_Acostagem_10 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/Acostagem_10.png" /> Acostagem '
             });
-var format_Armazenagem__11 = new ol.format.GeoJSON();
-var features_Armazenagem__11 = format_Armazenagem__11.readFeatures(json_Armazenagem__11, 
+var format_Armazenagem_11 = new ol.format.GeoJSON();
+var features_Armazenagem_11 = format_Armazenagem_11.readFeatures(json_Armazenagem_11, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:31985'});
-var jsonSource_Armazenagem__11 = new ol.source.Vector({
+var jsonSource_Armazenagem_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Armazenagem__11.addFeatures(features_Armazenagem__11);
-var lyr_Armazenagem__11 = new ol.layer.Vector({
+jsonSource_Armazenagem_11.addFeatures(features_Armazenagem_11);
+var lyr_Armazenagem_11 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Armazenagem__11, 
-                style: style_Armazenagem__11,
-                popuplayertitle: 'Armazenagem_',
+                source:jsonSource_Armazenagem_11, 
+                style: style_Armazenagem_11,
+                popuplayertitle: 'Armazenagem',
                 interactive: true,
-                title: '<img src="styles/legend/Armazenagem__11.png" /> Armazenagem_'
+                title: '<img src="styles/legend/Armazenagem_11.png" /> Armazenagem'
             });
 var format_reaseInstalaesAlfandegadasdoPorto_12 = new ol.format.GeoJSON();
 var features_reaseInstalaesAlfandegadasdoPorto_12 = format_reaseInstalaesAlfandegadasdoPorto_12.readFeatures(json_reaseInstalaesAlfandegadasdoPorto_12, 
@@ -275,7 +275,7 @@ var group_reaseInstalaesAlfandegadasdoPorto = new ol.layer.Group({
                                 fold: 'open',
                                 title: 'Áreas e Instalações Alfandegadas do Porto '});
 var group_Armazenagem = new ol.layer.Group({
-                                layers: [lyr_Armazenagem__11,],
+                                layers: [lyr_Armazenagem_11,],
                                 fold: 'open',
                                 title: 'Armazenagem'});
 var group_Acostagem = new ol.layer.Group({
@@ -319,7 +319,7 @@ var group_UnidadedeConservao = new ol.layer.Group({
                                 fold: 'open',
                                 title: 'Unidade de Conservação'});
 
-lyr_GoogleSatellite_0.setVisible(true);lyr_UnidadedeConservao_1.setVisible(false);lyr_Equipamentos_2.setVisible(false);lyr_Fundeadouros_3.setVisible(false);lyr_BaciadeEvoluo_4.setVisible(false);lyr_CanaldeAcesso_5.setVisible(false);lyr_AcessosDutovirios_6.setVisible(false);lyr_AcessosInternosRodovirios_7.setVisible(false);lyr_AcessosRodovirios_8.setVisible(false);lyr_InstalaesNoOperacionais_9.setVisible(false);lyr_Acostagem_10.setVisible(false);lyr_Armazenagem__11.setVisible(false);lyr_reaseInstalaesAlfandegadasdoPorto_12.setVisible(false);lyr_reasArrendveis_13.setVisible(false);lyr_reasArrendadas_14.setVisible(false);lyr_Zoneamento_15.setVisible(false);lyr_PoligonaldareadoPortoOrganizadodeCabedelo_16.setVisible(true);
+lyr_GoogleSatellite_0.setVisible(true);lyr_UnidadedeConservao_1.setVisible(false);lyr_Equipamentos_2.setVisible(false);lyr_Fundeadouros_3.setVisible(false);lyr_BaciadeEvoluo_4.setVisible(false);lyr_CanaldeAcesso_5.setVisible(false);lyr_AcessosDutovirios_6.setVisible(false);lyr_AcessosInternosRodovirios_7.setVisible(false);lyr_AcessosRodovirios_8.setVisible(false);lyr_InstalaesNoOperacionais_9.setVisible(false);lyr_Acostagem_10.setVisible(false);lyr_Armazenagem_11.setVisible(false);lyr_reaseInstalaesAlfandegadasdoPorto_12.setVisible(false);lyr_reasArrendveis_13.setVisible(false);lyr_reasArrendadas_14.setVisible(false);lyr_Zoneamento_15.setVisible(false);lyr_PoligonaldareadoPortoOrganizadodeCabedelo_16.setVisible(true);
 var layersList = [lyr_GoogleSatellite_0,group_UnidadedeConservao,group_Equipamentos,group_Fundeadouros,group_BaciadeEvoluo,group_CanaldeAcesso,group_AcessosDutovirios,group_AcessosInternosRodovirios,group_AcessosRodovirios,group_InstalaesNoOperacionais,group_Acostagem,group_Armazenagem,group_reaseInstalaesAlfandegadasdoPorto,group_reasArrendveis,group_reasArrendadas,group_Zoneamento,group_PoligonaldareadoPortoOrganizado];
 lyr_UnidadedeConservao_1.set('fieldAliases', {'Nome': 'Nome', 'Ano': 'Ano de Disponibilização ', 'Jurisdiç': 'Jurisdição ', 'P_Manejo': 'Plano de Manejo ', 'Categoria': 'Categoria', 'Fonte': 'Fonte', 'Estado': 'Estado', 'Município': 'Município', 'Ato_Legal': 'Ato Legal ', 'Uso': 'Uso', 'Decreto': 'Decreto', });
 lyr_Equipamentos_2.set('fieldAliases', {'Tipo_de_Eq': 'Tipo de Equipamento ', 'Operador': 'Operador do Equipamento ', 'Finalidade': 'Finalidade do Equipamento', 'Capacidade': 'Capacidade do Equipamento (t) ', 'Data_Fabri': 'Data de Fabricação ', 'Tempo_Uso': 'Tempo de Uso (anos) ', });
@@ -331,7 +331,7 @@ lyr_AcessosInternosRodovirios_7.set('fieldAliases', {'Nome': 'Nome', 'Extens_Km'
 lyr_AcessosRodovirios_8.set('fieldAliases', {'Sigla': 'Sigla', 'PNV': 'PNV (plano nacional da viação)', 'Jurisdiç': 'Jurisdição ', 'Classific': 'Classificação ', 'Concess': 'Concessão ', 'Município': 'Município', 'UF': 'Unidade de Federação ', 'VMD': 'VMD Diário ', 'Extens_KM': 'Extensão (Km) ', });
 lyr_InstalaesNoOperacionais_9.set('fieldAliases', {'Área_m2': 'Área (m²) ', 'Tipo': 'Tipo de Instalação ', 'Uso': 'Uso da Instalação ', 'Regime': 'Regime de Exploração ', 'Justificat': 'Justificativa ', });
 lyr_Acostagem_10.set('fieldAliases', {'Profund_M': 'Profundidade (m)', 'Caract_Con': 'Características Construtivas ', 'Id_Berço': 'Identificador do Berço ', 'Conservaç': 'Estado de Conservação ', 'Comprim_M': 'Comprimento (m) ', 'Produtos_': 'Principais Produtos ', });
-lyr_Armazenagem__11.set('fieldAliases', {'Tipo': 'Tipo da Instalação ', 'Capacidade': 'Capacidade (t)', 'Volume_m³': 'Volume (m³) ', 'Regime': 'Regime de Exploração ', 'Area_Armz_': 'Área (m²) ', });
+lyr_Armazenagem_11.set('fieldAliases', {'Tipo': 'Tipo da Instalação ', 'Capacidade': 'Capacidade (t)', 'Volume_m³': 'Volume (m³) ', 'Regime': 'Regime de Exploração ', 'Area_Armz_': 'Área (m²) ', });
 lyr_reaseInstalaesAlfandegadasdoPorto_12.set('fieldAliases', {'Área_m²': 'Área (m²) ', 'Nome': 'Nome', 'Companhia': 'Companhia', 'Inst_Legal': 'Instrumento Legal', 'Produto': 'Tipo de Produto ', });
 lyr_reasArrendveis_13.set('fieldAliases', {'Área_m²': 'Área (m²) ', 'Nome': 'Nome da Área ', 'Uso': 'Uso', });
 lyr_reasArrendadas_14.set('fieldAliases', {'Área_m²': 'Área (m²) ', 'Grupo': 'Grupo', 'Autoridade': 'Autoridade', 'Contrato': 'Número do Contrato ', 'Arrend_Ori': 'Arrendatário Original ', 'Arrend_Atu': 'Arrendatário Atual ', 'Tipo': 'Tipo Especificado no Instrumento ', 'Objeto': 'Objeto', 'Finalidade': 'Finalidade', 'Observ': 'Observações ', 'Data_Iníc': 'Data de Início do Arrendamento', 'Data_Termi': 'Data de Término do Arrendamento ', });
@@ -347,7 +347,7 @@ lyr_AcessosInternosRodovirios_7.set('fieldImages', {'Nome': 'TextEdit', 'Extens_
 lyr_AcessosRodovirios_8.set('fieldImages', {'Sigla': 'TextEdit', 'PNV': 'TextEdit', 'Jurisdiç': 'TextEdit', 'Classific': 'TextEdit', 'Concess': 'TextEdit', 'Município': 'TextEdit', 'UF': 'TextEdit', 'VMD': 'TextEdit', 'Extens_KM': 'TextEdit', });
 lyr_InstalaesNoOperacionais_9.set('fieldImages', {'Área_m2': 'TextEdit', 'Tipo': 'TextEdit', 'Uso': 'TextEdit', 'Regime': 'TextEdit', 'Justificat': 'TextEdit', });
 lyr_Acostagem_10.set('fieldImages', {'Profund_M': 'TextEdit', 'Caract_Con': 'TextEdit', 'Id_Berço': 'TextEdit', 'Conservaç': 'TextEdit', 'Comprim_M': 'TextEdit', 'Produtos_': 'TextEdit', });
-lyr_Armazenagem__11.set('fieldImages', {'Tipo': 'TextEdit', 'Capacidade': 'TextEdit', 'Volume_m³': 'TextEdit', 'Regime': 'TextEdit', 'Area_Armz_': 'TextEdit', });
+lyr_Armazenagem_11.set('fieldImages', {'Tipo': 'TextEdit', 'Capacidade': 'TextEdit', 'Volume_m³': 'TextEdit', 'Regime': 'TextEdit', 'Area_Armz_': 'TextEdit', });
 lyr_reaseInstalaesAlfandegadasdoPorto_12.set('fieldImages', {'Área_m²': 'TextEdit', 'Nome': 'TextEdit', 'Companhia': 'TextEdit', 'Inst_Legal': 'TextEdit', 'Produto': 'TextEdit', });
 lyr_reasArrendveis_13.set('fieldImages', {'Área_m²': 'TextEdit', 'Nome': 'TextEdit', 'Uso': 'TextEdit', });
 lyr_reasArrendadas_14.set('fieldImages', {'Área_m²': 'TextEdit', 'Grupo': 'TextEdit', 'Autoridade': 'TextEdit', 'Contrato': 'TextEdit', 'Arrend_Ori': 'TextEdit', 'Arrend_Atu': 'TextEdit', 'Tipo': 'TextEdit', 'Objeto': 'TextEdit', 'Finalidade': 'TextEdit', 'Observ': 'TextEdit', 'Data_Iníc': 'TextEdit', 'Data_Termi': 'TextEdit', });
@@ -363,7 +363,7 @@ lyr_AcessosInternosRodovirios_7.set('fieldLabels', {'Nome': 'inline label - visi
 lyr_AcessosRodovirios_8.set('fieldLabels', {'Sigla': 'inline label - visible with data', 'PNV': 'inline label - visible with data', 'Jurisdiç': 'inline label - visible with data', 'Classific': 'inline label - visible with data', 'Concess': 'inline label - visible with data', 'Município': 'inline label - visible with data', 'UF': 'inline label - visible with data', 'VMD': 'inline label - visible with data', 'Extens_KM': 'inline label - visible with data', });
 lyr_InstalaesNoOperacionais_9.set('fieldLabels', {'Área_m2': 'inline label - visible with data', 'Tipo': 'inline label - visible with data', 'Uso': 'inline label - visible with data', 'Regime': 'inline label - visible with data', 'Justificat': 'inline label - visible with data', });
 lyr_Acostagem_10.set('fieldLabels', {'Profund_M': 'inline label - visible with data', 'Caract_Con': 'inline label - visible with data', 'Id_Berço': 'inline label - visible with data', 'Conservaç': 'inline label - visible with data', 'Comprim_M': 'inline label - visible with data', 'Produtos_': 'inline label - visible with data', });
-lyr_Armazenagem__11.set('fieldLabels', {'Tipo': 'inline label - visible with data', 'Capacidade': 'inline label - visible with data', 'Volume_m³': 'inline label - visible with data', 'Regime': 'inline label - visible with data', 'Area_Armz_': 'inline label - visible with data', });
+lyr_Armazenagem_11.set('fieldLabels', {'Tipo': 'inline label - visible with data', 'Capacidade': 'inline label - visible with data', 'Volume_m³': 'inline label - visible with data', 'Regime': 'inline label - visible with data', 'Area_Armz_': 'inline label - visible with data', });
 lyr_reaseInstalaesAlfandegadasdoPorto_12.set('fieldLabels', {'Área_m²': 'inline label - visible with data', 'Nome': 'inline label - visible with data', 'Companhia': 'inline label - visible with data', 'Inst_Legal': 'inline label - visible with data', 'Produto': 'inline label - visible with data', });
 lyr_reasArrendveis_13.set('fieldLabels', {'Área_m²': 'inline label - visible with data', 'Nome': 'inline label - visible with data', 'Uso': 'inline label - visible with data', });
 lyr_reasArrendadas_14.set('fieldLabels', {'Área_m²': 'inline label - visible with data', 'Grupo': 'inline label - visible with data', 'Autoridade': 'inline label - visible with data', 'Contrato': 'inline label - visible with data', 'Arrend_Ori': 'inline label - visible with data', 'Arrend_Atu': 'inline label - visible with data', 'Tipo': 'inline label - visible with data', 'Objeto': 'inline label - visible with data', 'Finalidade': 'inline label - visible with data', 'Observ': 'inline label - visible with data', 'Data_Iníc': 'inline label - visible with data', 'Data_Termi': 'inline label - visible with data', });
